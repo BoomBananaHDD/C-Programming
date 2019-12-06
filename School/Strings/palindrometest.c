@@ -30,8 +30,6 @@ int main(void)
         word1[i]=word[k];
     }
 
-    printf("%s,%s", word1, word);
-
     if(strcmp(word,word1)==0) // compare both strings
     {
         printf("The word \"%s\" is a palindrome!\n", word);
