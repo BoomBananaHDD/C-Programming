@@ -2,7 +2,6 @@
 // String length
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 int main(void)
@@ -10,7 +9,7 @@ int main(void)
     char word[100];
     int len;
 
-    printf("Please write a word: ");
+    printf("Please enter a word: ");
     gets(word);
 
     len = strlen(word);
