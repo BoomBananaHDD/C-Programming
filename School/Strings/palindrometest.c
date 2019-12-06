@@ -1,5 +1,5 @@
 // Autor: Luca Gaerisch
-// Palindromtest
+// Palindrometest
 
 #include <stdio.h>
 #include <string.h>
@@ -15,23 +15,30 @@ int main(void)
     len = strlen(word);
     k=len;
 
-    for(int i=0; i<len; i++)
+    for(int i=0; i<len; i++) // uppercase letters are converted to lowercase letters
     {
-        k--;
-        word1[i]=word[k];
-        if(word1[i]>='A' && word1[i]<='Z')
+        if(word[i]>='A' && word[i]<='Z')
         {
-            word1[i]+=32;
+            word[i]+=32;
         }
     }
 
-    if(strcmp(word,word1)==0)
+
+    for(int i=0; i<len; i++) // array are stored backwards in another array
+    {
+        k--;
+        word1[i]=word[k];
+    }
+
+    printf("%s,%s", word1, word);
+
+    if(strcmp(word,word1)==0) // compare both strings
     {
         printf("The word \"%s\" is a palindrome!\n", word);
     }
     else
     {
-        printf("The word \"%s\" is a palindrome!\n", word);
+        printf("The word \"%s\" is NOT a palindrome!\n", word);
     }
     
     return 0;
