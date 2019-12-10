@@ -14,19 +14,21 @@ int main(void)
 
     printf("Full Name: ");
     gets(name);
-    printf("PLZ: ");
-    gets(plz);
-    printf("Ort: ");
-    gets(ort);
-    printf("Street and Housenumber: ");
-    gets(street);
-
     strcat(all,name);
     strcat(all," ");
+
+    printf("PLZ: ");
+    gets(plz);
     strcat(all,plz);
     strcat(all," ");
+
+    printf("Ort: ");
+    gets(ort);
     strcat(all,ort);
     strcat(all," ");
+
+    printf("Street and Housenumber: ");
+    gets(street);
     strcat(all,street);
 
     printf("%s\n", all);
