@@ -7,6 +7,8 @@
 void clear();
 float addition();
 float subtraction();
+float multi();
+float division();
 
 int main(void)
 { // Start main
@@ -27,6 +29,8 @@ int main(void)
     {
         case 1: addition(); break;
         case 2: subtraction(); break;
+        case 3: multi(); break;
+        case 4: division(); break;
         case 5: return 0; break;
     }
 
@@ -65,6 +69,38 @@ float subtraction()
     printf("Second number: ");
     scanf("%f", &num2);
     res = num1 - num2;
+    printf("Result: %g\n", res);
+    system("pause");
+    main();
+}
+
+float multi()
+{
+    float num1,num2,res;
+
+    clear();
+    printf("========== MULTI ==========\n");
+    printf("First number: ");
+    scanf("%f", &num1);
+    printf("Second number: ");
+    scanf("%f", &num2);
+    res = num1 * num2;
+    printf("Result: %g\n", res);
+    system("pause");
+    main();
+}
+
+float division()
+{
+    float num1,num2,res;
+
+    clear();
+    printf("========== Division ==========\n");
+    printf("First number: ");
+    scanf("%f", &num1);
+    printf("Second number: ");
+    scanf("%f", &num2);
+    res = num1 / num2;
     printf("Result: %g\n", res);
     system("pause");
     main();
