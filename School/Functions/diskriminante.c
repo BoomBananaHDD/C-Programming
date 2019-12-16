@@ -2,6 +2,7 @@
 // Diskriminante
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 float diskriminante(float x, float y, float z);
@@ -43,6 +44,9 @@ int main(void)
         printf("Die 1. Nullstelle ist: ( %g | 0 )\n", x1(a,b,dis));
         printf("Die 2. Nullstelle ist: ( %g | 0 )\n", x2(a,b,dis));
     }
+
+    system("pause");
+
     return 0;
 } // End main
 
