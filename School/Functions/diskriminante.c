@@ -6,7 +6,7 @@
 
 float diskriminante(float x, float y, float z);
 float x1(float x, float y, float z);
-float x1(float x, float y, float z);
+float x2(float x, float y, float z);
 
 
 int main(void)
