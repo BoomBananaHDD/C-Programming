@@ -6,6 +6,8 @@
 
 float diskriminante(float x, float y, float z);
 float x1(float x, float y, float z);
+float x1(float x, float y, float z);
+
 
 int main(void)
 { // Start main
@@ -35,12 +37,11 @@ int main(void)
     else if(dis<0)
     {
         printf("Es gibt keine reelle loesung fuer die Nullstelle!\n");
-
     }
     else
     {
         printf("Die 1. Nullstelle ist: ( %g | 0 )\n", x1(a,b,dis));
-        printf("Die 2. Nullstelle ist: ( %g | 0 )\n", x1(a,b,dis));
+        printf("Die 2. Nullstelle ist: ( %g | 0 )\n", x2(a,b,dis));
     }
     return 0;
 } // End main
@@ -53,4 +54,9 @@ float diskriminante(float x, float y, float z)
 float x1(float x, float y, float z)
 {
     return ((-1 * y) + sqrt(z)) / (2 * x); // sqrt == Wurzel aus
+}
+
+float x2(float x, float y, float z)
+{
+    return ((-1 * y) - sqrt(z)) / (2 * x); // sqrt == Wurzel aus
 }
