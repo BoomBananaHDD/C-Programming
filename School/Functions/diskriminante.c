@@ -62,5 +62,5 @@ float x1(float x, float y, float z)
 
 float x2(float x, float y, float z)
 {
-    return ((-1 * y) + sqrt(z)) / (2 * x); // sqrt == Wurzel aus
+    return ((-1 * y) - sqrt(z)) / (2 * x); // sqrt == Wurzel aus
 }
