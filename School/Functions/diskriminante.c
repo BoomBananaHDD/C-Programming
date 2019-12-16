@@ -21,7 +21,7 @@ int main(void)
     printf("Bitte geben Sie den punkt c an: ");
     scanf("%f", &c);
 
-    printf("X\t|\tY\n");
+    printf("\nX\t|\tY\n");
     for(int x=-5; x<=5; x++)
     {
         y=(a * (x * x) + (b * x) + c);
