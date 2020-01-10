@@ -23,14 +23,14 @@ int main(void)
 		}
 		else
 		{
-			printf("NOPE!");
+			printf("Fehlgeschlagen");
 			return 0;
 		}
 	}
 
     if(test==4)
     {
-    	printf("YESSS");
+    	printf("Eingelogt!");
     }
 
     return 0;
