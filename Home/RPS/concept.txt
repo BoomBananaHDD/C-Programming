@@ -1,0 +1,20 @@
+Rock Paper Scissor  V#        
+======================
+Played games: ##
+Streaks: ##
+
+Quit or Play
+======================
+Select: 
+
+
+
+
+
+Current Streak: ##
+=======================================================
+Please choose rock, paper, scissor or quit: 
+
+Your choice: Rock
+Bot Choice: Scissor
+You won this Round!
