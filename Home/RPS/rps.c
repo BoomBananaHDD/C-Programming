@@ -62,6 +62,7 @@ int player_choice()
 
     return 0;
 }
+
 int bot_choice()
 { // Random value that choose "R" "P" or "S"
     return rand() % 3;
