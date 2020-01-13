@@ -8,30 +8,40 @@
 #include "rps.h"
 
 int main(void)
-{ // Start main
-    int player, bot, res;
+{
+    int player, bot, result;
 
     srand(time(NULL));
-
-    for (;;)
+    for (;;) // infinite loop
     {
-        player = get_player_choice();
-        if (player == QUIT)
+        player = player_choice();
+        if (player == QUIT) // Quitting the Game
         {
             return 0;
         }
-        bot = get_bot_choice();
-        printf("%i%i", player, bot);
+
+        bot = bot_choice();
+        result = get_result(player, bot);
+        print_result(result);
     }
     return 0;
-} // End main
+}
 
-int get_player_choice()
+int player_choice()
 {
     char input[8];
 
     printf("\nPlease choose rock, paper, scissor or quit: ");
     gets(input);
+
+    // Convert upper in lower case
+    for(int i=0; i<strlen(input); i++)
+    {
+        if(input[i]>='A' && input[i]<='Z')
+        {
+            input[i]+=32;
+        }
+    }
 
     if (strcmp(input, "rock") == 0)
     {
@@ -49,9 +59,44 @@ int get_player_choice()
     {
         return QUIT;
     }
+
     return 0;
 }
-int get_bot_choice()
-{
+int bot_choice()
+{ // Random value that choose "R" "P" or "S"
     return rand() % 3;
+}
+
+int get_result(int player, int bot)
+{
+    int result = 0;
+    if(player == ROCK && bot == PAPER || player == PAPER && bot == SCISSOR || player == SCISSOR && bot == ROCK)
+    { // BOT WIN CASES
+        result = BOT_WON;
+    }
+    else if(player == ROCK && bot == SCISSOR || player == PAPER && bot == ROCK || player == SCISSOR && bot == PAPER)
+    { // PLAYER WIN CASES
+        result = PLAYER_WON;
+    }
+    else if(player == ROCK && bot == ROCK || player == PAPER && bot == PAPER || player == SCISSOR && bot == SCISSOR)
+    { // DRAW CASES
+        result = DRAW;
+    }
+    return result;
+}
+
+void print_result(int result)
+{
+    if(result == BOT_WON)
+    {
+        printf("Bot won this round!\n");
+    }
+    else if(result == PLAYER_WON)
+    {
+        printf("You won this round!\n");
+    }
+    else if (result == DRAW)
+    {
+        printf("It's a draw!\n");
+    }
 }
